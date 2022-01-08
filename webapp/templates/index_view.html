@@ -9,5 +9,17 @@
 {% endblock %}
 
 {% block content %}
-    <h1>hello</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+            {% for book in books %}
+                <div class="col my-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.author }} ({{ book.email }}) <a href="#"><i class="bi bi-pen"></i></a>
+                                <a href="#"><i class="bi bi-trash"></i></a></h5>
+                            <p class="card-text">{{ book.text }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
 {% endblock %}
