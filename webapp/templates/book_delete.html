@@ -4,7 +4,7 @@
     <div class="container">
         <form method="POST">
             {% csrf_token %}
-            <h2 class="text-alert">Удалить запись</h2>
+            <h2 class="text-alert text-center">Удалить запись</h2>
             <input class="btn btn-danger w-100 mt-4" type="submit" value="Да">
             </form>
         <a class="my-3 btn btn-success w-100" href="{% url "index_view" %}">Нет</a>
