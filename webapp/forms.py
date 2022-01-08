@@ -8,7 +8,7 @@ class BookForm(forms.Form):
                              label="Имя",
                              error_messages={"required": "Поле обязательно для заполнения",
                                              "max_length": "Максимальная длина поля 100"})
-    email = forms.EmailField(required=True, label="Статус",
+    email = forms.EmailField(required=True, label="E-mail адрес",
                              error_messages={"required": "Поле обязательно для заполнения",
                                              "max_length": "Максимальная длина поля 100"}
                              )

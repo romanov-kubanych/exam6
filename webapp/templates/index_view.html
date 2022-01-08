@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+    <h1 class="text-warning text-center mt-5">Текущие записи</h1>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
             {% for book in books %}
                 <div class="col my-2">
@@ -18,4 +19,17 @@
                 </div>
             {% endfor %}
         </div>
+    <div class="my-3 border border-info p-3 rounded-2">
+    <div class="text-center my-2">
+            <h2 class="text-success">Создать новую запись</h2>
+        </div>
+        <div>
+            <form action="{% url 'create_view' %}" method="post">
+                {% include 'partial/form.html' with button_text='Создать' %}
+            </form>
+        </div>
+        <div class="my-1">
+            <a class="btn btn-danger w-100" href={% url 'index_view' %}>Отмена</a>
+        </div>
+    </div>
 {% endblock %}
