@@ -10,8 +10,8 @@
                 <div class="col my-2">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">{{ book.author }} ({{ book.email }}) <a href="#"><i class="bi bi-pen"></i></a>
-                                <a href="#"><i class="bi bi-trash"></i></a></h5>
+                            <h5 class="card-title">{{ book.author }} ({{ book.email }}) <a href="{% url 'update_view' book.pk %}"><i class="bi bi-pen"></i></a>
+                                <a href="{% url 'delete_view' book.pk %}"><i class="bi bi-trash"></i></a></h5>
                             <p class="card-text">{{ book.text }}</p>
                         </div>
                     </div>
